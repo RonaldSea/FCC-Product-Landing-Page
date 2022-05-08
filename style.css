@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+:root {
+  --nav-height: 75px;
+  --dark-green: #235242;
+  --light-green: #e1fff5;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  background-color: white;
+}
+li {
+  list-style: none;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+p {
+  line-height: 2.4rem;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  width: 100vw;
+  min-height: var(--nav-height);
+  padding: 0 10vw;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+}
+.logo {
+  width: auto;
+}
+#header-img {
+  max-width: 150px;
+}
+#nav-bar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50vw;
+}
+#home {
+  display: grid;
+  grid-template-columns: 10vw 50vw 30vw 10vw;
+  grid-template-rows: 10vh 1fr 10vh;
+  margin-top: var(--nav-height);
+  background-color: var(--light-green);
+}
+.home_description {
+  display: grid;
+  place-content: center;
+  grid-column: 2;
+  grid-row: 2;
+}
+.lg-title {
+  font-size: 4.8rem;
+}
+.md-title {
+  font-size: 3rem;
+}
+.sm-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+.button {
+  width: 120px;
+  height: 40px;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--dark-green);
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.mb-28 {
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+.home-img {
+  grid-column: 3;
+  grid-row: 2;
+}
+#about,
+#work {
+  display: grid;
+  padding: 10vw 10vw 5vw;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+}
+.label-sm {
+  font-weight: bold;
+  color: var(--dark-green);
+}
+.work_description {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2;
+}
+.cards_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: -webkit-fill-available;
+}
+.card__description-container p {
+  margin: 0;
+}
+.card__container {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  grid-template-rows: 90px;
+  column-gap: 12px;
+}
+.card__icon-container {
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+  background-color: #e8ffea;
+}
+.card__icon-container img {
+  width: 48px;
+}
+.video-player {
+  height: 100vh;
+  padding: 10vw 10vw 5vw;
+}
+#video {
+  width: 100%;
+  height: 100%;
+}
+.form__container {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  height: 50vh;
+  padding: 0 10vw;
+}
+.email_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.email-input {
+  height: 40px;
+  width: 350px;
+  padding-left: 10px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid var(--dark-green);
+  outline: none;
+}
+.form-button {
+  border-radius: 0 4px 4px 0;
+}
+
+@media (max-width: 650px) {
+  :root {
+    --nav-height: 190px;
+  }
+  body {
+    font-size: 1.4rem;
+  }
+  p {
+    line-height: 2.2rem;
+  }
+  a {
+    text-decoration: underline;
+  }
+  #header {
+    flex-direction: column;
+  }
+  #nav-bar {
+    margin-bottom: 8px;
+  }
+  #nav-bar ul {
+    display: grid;
+    padding: 0;
+    row-gap: 8px;
+    text-align: center;
+  }
+  .lg-title {
+    font-size: 3rem;
+  }
+  .md-title {
+    font-size: 2.4rem;
+  }
+  .sm-title {
+    font-size: 1.8rem;
+  }
+
+  #home {
+    grid-template-columns: 10vw 1fr 10vw;
+  }
+  .home-img,
+  .work-img,
+  .about-img {
+    display: none;
+  }
+  #about,
+  #work {
+    height: auto;
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+  .cards_container {
+    min-height: 450px;
+  }
+  .video-player {
+    height: auto;
+    width: 100vw;
+    margin-top: 10vw;
+  }
+  .email-input {
+    width: 150px;
+  }
+  .form__container {
+    height: 30vh;
+  }
+}
